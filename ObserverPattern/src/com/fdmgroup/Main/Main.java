@@ -17,23 +17,23 @@ public class Main{
 		
 		StockObserver observer1 = new StockObserver(stockGrabber);
 		
-		stockGrabber.setIBMPrice(197.00);
-		stockGrabber.setAAPLPrice(677.60);
-		stockGrabber.setGOOGPrice(676.40);
+		stockGrabber.setIBMPrice(197);
+		stockGrabber.setAAPLPrice(677);
+		stockGrabber.setGOOGPrice(676);
 		
 		StockObserver observer2 = new StockObserver(stockGrabber);
 		
-		stockGrabber.setIBMPrice(197.00);
-		stockGrabber.setAAPLPrice(677.60);
-		stockGrabber.setGOOGPrice(676.40);
+		stockGrabber.setIBMPrice(197);
+		stockGrabber.setAAPLPrice(677);
+		stockGrabber.setGOOGPrice(676);
 		
 		// Delete one of the observers
 		
-		// stockGrabber.unregister(observer2);
+		 stockGrabber.unregister(observer2);
 		
-		stockGrabber.setIBMPrice(197.00);
-		stockGrabber.setAAPLPrice(677.60);
-		stockGrabber.setGOOGPrice(676.40);
+		stockGrabber.setIBMPrice(197);
+		stockGrabber.setAAPLPrice(677);
+		stockGrabber.setGOOGPrice(676);
 		
 	
 		

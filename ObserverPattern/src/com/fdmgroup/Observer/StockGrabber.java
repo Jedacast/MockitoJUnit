@@ -2,12 +2,14 @@ package com.fdmgroup.Observer;
 
 import java.util.ArrayList;
 
-public class StockGrabber implements Subject{
+public class StockGrabber implements Subject{ //our subject interface
 
-	private ArrayList<Observer> observers;
-	private double ibmPrice;
-	private double aaplPrice;
-	private double googPrice;
+	private ArrayList<Observer> observers; // store observers in Arraylist
+	
+	
+	private int ibmPrice;
+	private int aaplPrice;
+	private int googPrice;
 	
 public StockGrabber(){
 		
@@ -15,7 +17,8 @@ public StockGrabber(){
 		
 		observers = new ArrayList<Observer>();
 	}
-	
+
+	@Override
 	public void register(Observer newObserver) {
 		
 		// Adds a new observer to the ArrayList
@@ -23,7 +26,10 @@ public StockGrabber(){
 		observers.add(newObserver);
 		
 	}
-
+/**
+ * 
+ */
+	@Override
 	public void unregister(Observer deleteObserver) {
 		
 		// Get the index of the observer to delete
@@ -32,21 +38,21 @@ public StockGrabber(){
 		
 		// Print out message (Have to increment index to match)
 		
-		System.out.println("Observer " + (observerIndex+1) + " deleted");
+		System.out.println("Observer " + (observerIndex+1) + " has been deleted");
 		
 		// Removes observer from the ArrayList
 		
 		observers.remove(observerIndex);
 		
 	}
-
+	@Override
 	public void notifyObserver() {
 		
 		// Cycle through all observers and notifies them of
-		// price changes
+		// price changes that occur
 		
 		for(Observer observer : observers){
-			
+			//calls the update method and automatically puts the information in for us
 			observer.update(ibmPrice, aaplPrice, googPrice);
 			
 		}
@@ -54,7 +60,7 @@ public StockGrabber(){
 	
 	// Change prices for all stocks and notifies observers of changes
 	
-	public void setIBMPrice(double newIBMPrice){
+	public void setIBMPrice(int newIBMPrice){
 		
 		this.ibmPrice = newIBMPrice;
 		
@@ -62,7 +68,7 @@ public StockGrabber(){
 		
 	}
 	
-	public void setAAPLPrice(double newAAPLPrice){
+	public void setAAPLPrice(int newAAPLPrice){
 		
 		this.aaplPrice = newAAPLPrice;
 		
@@ -70,7 +76,7 @@ public StockGrabber(){
 		
 	}
 
-	public void setGOOGPrice(double newGOOGPrice){
+	public void setGOOGPrice(int newGOOGPrice){
 	
 		this.googPrice = newGOOGPrice;
 	
