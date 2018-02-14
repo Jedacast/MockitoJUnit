@@ -17,23 +17,25 @@ public class Main {
 		InventoryObserver observer1 = new InventoryObserver(inventoryGrabber);
 
 		inventoryGrabber.setHellFireFury(1);
-		inventoryGrabber.soldHellFireFury();
+		inventoryGrabber.soldOneHellFireFury();
 		inventoryGrabber.setAstroPhysicsOnTheGo(20);
+		inventoryGrabber.soldOneAstroPhsicsOnTheGo();
 		inventoryGrabber.setHungryCaterpillar(10);
+		inventoryGrabber.soldOneHungryCaterpillar();;
 
-		//Create a 2nd Observer
-		InventoryObserver observer2 = new InventoryObserver(inventoryGrabber);
-
-		inventoryGrabber.setHellFireFury(53);
-		inventoryGrabber.setAstroPhysicsOnTheGo(8);
-		inventoryGrabber.setHungryCaterpillar(15);
-
-		// Delete one of the observers
-		inventoryGrabber.unregister(observer2);
-
-		inventoryGrabber.setHellFireFury(3);
-		inventoryGrabber.setAstroPhysicsOnTheGo(5);
-		inventoryGrabber.setHungryCaterpillar(20);
+//		//Create a 2nd Observer
+//		InventoryObserver observer2 = new InventoryObserver(inventoryGrabber);
+//
+//		inventoryGrabber.setHellFireFury(53);
+//		inventoryGrabber.setAstroPhysicsOnTheGo(8);
+//		inventoryGrabber.setHungryCaterpillar(15);
+//
+//		// Delete one of the observers
+//		inventoryGrabber.unregister(observer2);
+//
+//		inventoryGrabber.setHellFireFury(3);
+//		inventoryGrabber.setAstroPhysicsOnTheGo(5);
+//		inventoryGrabber.setHungryCaterpillar(20);
 
 	}
 

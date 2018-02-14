@@ -70,8 +70,7 @@ public class InventoryGrabber implements Subject {
 
 	}
 	
-	public void soldHellFireFury() {
-
+	public void soldOneHellFireFury() {
 		this.hellFireFury--;
 
 		notifyObserver();
@@ -79,19 +78,32 @@ public class InventoryGrabber implements Subject {
 	}
 
 	public void setAstroPhysicsOnTheGo(int newAstroPhysicsOnTheGo) {
-
 		this.astroPhysicsOnTheGo = newAstroPhysicsOnTheGo;
+
+		notifyObserver();
+
+	}
+	
+	public void soldOneAstroPhsicsOnTheGo() {
+		this.astroPhysicsOnTheGo--;
 
 		notifyObserver();
 
 	}
 
 	public void setHungryCaterpillar(int newHungryCaterpillar) {
-
 		this.hungryCaterpillar = newHungryCaterpillar;
 
 		notifyObserver();
 
 	}
+	
+	public void soldOneHungryCaterpillar() {
+		this.hungryCaterpillar--;
+
+		notifyObserver();
+
+	}
+
 
 }

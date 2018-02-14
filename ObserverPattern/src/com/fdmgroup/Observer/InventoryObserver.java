@@ -44,13 +44,13 @@ public class InventoryObserver implements Observer {
 		this.astroPhysicsOnTheGo = astroPhysicsOnTheGo;
 		this.hungryCaterpillar = hungryCaterpillar;
 
-		printThePrices();
+		printTheInventory();
 
 	}
 
-	public void printThePrices() {
+	public void printTheInventory() {
 
-		System.out.println(observerID + "\nHell Fire & Fury Inventory: " + hellFireFury + "\nAstroPysicsOnTheGo Inventory: " + astroPhysicsOnTheGo + "\nHungry Caterpillar Inventory: " + hungryCaterpillar + "\n");
+		System.out.println("Observer: "+ observerID + "\nHell Fire & Fury Inventory: " + hellFireFury + "\nAstroPysicsOnTheGo Inventory: " + astroPhysicsOnTheGo + "\nHungry Caterpillar Inventory: " + hungryCaterpillar + "\n");
 
 	}
 
